@@ -1,5 +1,5 @@
 # redmine-ubuntu-ansible
-
+## Redmine4.X unofficialcooking edition. (Use Ubuntu,PostgreSQL)
 
 最小構成でインストールしたUbuntu ServerにRedmineを自動インストールするためのAnsibleプレイブックです。
 
@@ -15,7 +15,7 @@ Ansibleを使ってRedmineを自動インストールするためのプレイブ
 
 ## システム構成
 
-* Redmine 3.4
+* Redmine 4.0
 * Ubuntu Server 16.04.2 LTS
 * PostgreSQL
 * Apache
@@ -37,7 +37,7 @@ sudo pip install ansible
 ### playbookのダウンロード
 
 ```
-git clone https://github.com/farend/redmine-ubuntu-ansible.git
+git clone https://github.com/y503unavailable/redmine-ubuntu-ansible.git
 ```
 
 ### PostgreSQLに設定するパスワードの変更 (推奨)
