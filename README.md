@@ -28,11 +28,11 @@ http://www.redmine.org/issues/5358#note-108
 インストール直後の Ubuntu 16.04 にログインし以下の操作を行ってください。
 （自動更新が完了するまで数分待ってから実行）
 
-### Ansibleとgitのインストール
+### Ansibleとgitとunzipのインストール
 
 ```
 sudo apt-get update
-sudo apt-get install -y python-pip libpython-dev git libssl-dev
+sudo apt-get install -y python-pip libpython-dev git libssl-dev unzip
 sudo pip install ansible
 ```
 
