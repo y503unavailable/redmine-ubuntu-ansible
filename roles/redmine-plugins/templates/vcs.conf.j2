@@ -1,0 +1,46 @@
+LoadModule dav_svn_module modules/mod_dav_svn.so
+LoadModule authz_svn_module modules/mod_authz_svn.so
+
+# Suersionの設定
+PerlLoadModule Apache::Authn::Redmine
+
+<Location /repos/svn>
+  PerlAccessHandler Apache::Authn::Redmine::access_handler
+  PerlAuthenHandler Apache::Authn::Redmine::authen_handler
+
+  DAV svn
+  SVNParentPath /var/www/repos/svn
+#  SVNListParentPath on
+  AuthType Basic
+  AuthName Subversion
+  AuthUserFile /dev/null
+  
+  # for Redmine Authentication
+  RedmineDSN "DBI:mysql:database=redmine;host=localhost"
+  RedmineDbUser "redmine"
+  RedmineDbPass "{{ db_passwd_redmine }}"
+
+  Require valid-user
+</Location>
+
+# Gitの設定
+SetEnv GIT_PROJECT_ROOT /var/www/repos/git
+SetEnv GIT_HTTP_EXPORT_ALLow
+
+<Location /repos/git >
+  PerlAccessHandler Apache::Authn::Redmine::access_handler
+  PerlAuthenHandler Apache::Authn::Redmine::authen_handler
+
+  AuthType Basic
+  AuthName Git
+
+  # for Redmine Authentication
+  RedmineDSN "DBI:mysql:database=redmine;host=localhost"
+  RedmineDbUser "redmine"
+  RedmineDbPass "{{ db_passwd_redmine }}"
+  RedmineGitSmartHttp yes
+  AuthUserFile /dev/null
+  
+  Require valid-user  
+
+</Location>

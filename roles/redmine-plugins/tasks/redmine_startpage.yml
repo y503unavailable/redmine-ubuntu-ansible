@@ -1,0 +1,7 @@
+- name: redmine_startpage ソースコードをダウンロード
+  become: yes
+  git:
+    repo=https://github.com/txinto/redmine_startpage.git
+    dest={{ redmine_dir }}/plugins/redmine_startpage
+    version=master
+    
