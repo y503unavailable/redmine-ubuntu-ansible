@@ -36,4 +36,4 @@
 
 - name: Restart redmine
   become: yes
-  service: name=httpd state=restarted
+  service: name=apache2 state=restarted
