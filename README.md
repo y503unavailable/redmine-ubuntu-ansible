@@ -12,14 +12,15 @@ Ansibleを使ってRedmineを自動インストールするためのプレイブ
 
 [Redmine 3.4をUbuntu Server 16.04.2 LTSにインストールする手順](http://blog.redmine.jp/articles/3_4/install/ubuntu/)
 
-カテゴリのサブプロジェクト継承パッチの組み込み、プラグイン、テーマの追加、admin初期パスワードの変更を行っています。
-http://www.redmine.org/issues/5358#note-108
+Redmine標準に対して、カテゴリのサブプロジェクト継承パッチの組み込み、プラグイン、テーマの追加、admin初期パスワードの変更などを行っています。
 
 ## Redmine標準からの変更内容
 
 ### カテゴリのサブプロジェクト継承機能を追加しました。（標準のバージョンと同じ 2019/06/30） ###
 
 https://github.com/y503unavailable/redmine/issues/14
+
+http://www.redmine.org/issues/5358#note-108
 
 Redmine標準からの変更内容は下記参照ください。
 
