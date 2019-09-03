@@ -96,6 +96,19 @@
   when:
     result_database_yml is changed
 
+- name: make redmine_admin_passchg.rb
+  become: yes
+  template:
+    src=redmine_admin_passchg.rb.j2
+    dest=/tmp/redmine_admin_passchg.rb
+    force=no
+
+- name: change admin passwd
+  become: yes
+  shell:   RAILS_ENV=production bundle exec rails console  < /tmp/redmine_admin_passchg.rb
+  args:
+    chdir: "{{ redmine_dir }}"
+    
 - name: デフォルトの言語を日本語に変更
   become: yes
   command:

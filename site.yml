@@ -6,8 +6,12 @@
     - ruby
     - redmine
     - apache
+    - redmine-plugins
+    - redmine-themes
 
   post_tasks:
     - name: 完了
       debug:
         msg='インストールが完了しました。 http://{{ ansible_default_ipv4.address }}/redmine/  にアクセスしてください。'
+    - debug: msg="admin initial password= {{ redmine_admin_passwd }} "
+
