@@ -44,20 +44,27 @@ git clone https://github.com/y503unavailable/redmine-ubuntu-ansible.git
 
 ### PostgreSQLに設定するパスワードの変更 (推奨)
 
-ファイル `group_vars/redmine-servers` をエディタで開き、 `db_passwd_redmine` を適当な内容に変更してください。これはPostgreSQLのRedmine用ユーザー redmine に設定されるパスワードです。
+ファイル `group_vars/redmine-servers` をエディタで開き、 `db_passwd_redmine` を適当な内容に変更してください。
+
+これはPostgreSQLのRedmine用ユーザー redmine に設定されるパスワードです。
 
 ### ubuntuのバージョンによる変更点
 
 ubuntuのバージョンにより、デフォルトのpostgresqlのバージョンが異なります。
+
 ubuntu18または19を利用する場合は、下記箇所を修正してからansibleを実行してください。
 
 roles/system/tasks/main.yml
 
+```
 name='postgresql,postgresql-server-dev-9.5,python-psycopg2'
+```
 
+```
 ubuntu16の場合 postgresql-server-dev-9.5  (初期値)
 ubuntu18の場合 postgresql-server-dev-10
 ubuntu19の場合 postgresql-server-dev-11
+```
 
 ### playbook実行
 
@@ -68,7 +75,9 @@ cd redmine-ubuntu-ansible
 ansible-playbook -K -i hosts site.yml
 ```
 
-10〜20分ほどでインストールが完了します。webブラウザで `http://サーバIPアドレス/redmine` にアクセスしてください。Redmineの画面が表示されるはずです。
+10〜20分ほどでインストールが完了します。
+
+webブラウザで `http://サーバIPアドレス/redmine` にアクセスしてください。Redmineの画面が表示されるはずです。
 
 
 ## ライセンス
