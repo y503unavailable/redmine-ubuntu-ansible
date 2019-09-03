@@ -36,7 +36,7 @@ https://redmine.tokyo/projects/unofficialcooking
 
 詳細は下記参照ください。
 
-https://github.com/y503unavailable/redmine-ubuntu-ansible/tree/4.0-unofficialcooking/roles/redmine-plugins/tasks/main.yml
+https://github.com/y503unavailable/redmine-ubuntu-ansible/blob/master/roles/redmine-plugins/tasks/main.yml
 
 ## 同時インストールするテーマ
 
@@ -44,7 +44,7 @@ farend_basic,redmine_flat,gitmike,PurpleMine2,minimalflat2,flatly_light
 
 詳細は下記参照ください。
 
-https://github.com/y503unavailable/redmine-ubuntu-ansible/tree/4.0-unofficialcooking/roles/redmine-plugins/tasks/main.yml
+https://github.com/y503unavailable/redmine-ubuntu-ansible/blob/master/roles/redmine-themes/tasks/main.yml
 
 ## admin初期パスワードの変更
 
