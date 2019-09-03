@@ -72,7 +72,7 @@ ubuntu19の場合 postgresql-server-dev-11
 
 ```
 cd redmine-ubuntu-ansible
-ansible-playbook -K -i hosts site.yml
+ansible-playbook -i hosts site.yml
 ```
 
 10〜20分ほどでインストールが完了します。
