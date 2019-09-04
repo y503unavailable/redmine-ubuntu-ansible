@@ -58,14 +58,14 @@ admin初期パスワード  unofficial-cracking
 ## システム構成
 
 * Redmine 4.0
-* Ubuntu Server 16.04.2 LTS
+* Ubuntu Server 18.04 LTS
 * PostgreSQL
 * Apache
 
 
 ## Redmineのインストール手順
 
-インストール直後の Ubuntu 16.04 にログインし以下の操作を行ってください。
+インストール直後の Ubuntu 18.04 にログインし以下の操作を行ってください。
 
 （自動更新が完了するまで数分待ってから実行　unattendが完全に終わるまで待つこと）
 
@@ -93,17 +93,17 @@ git clone https://github.com/y503unavailable/redmine-ubuntu-ansible.git
 
 ubuntuのバージョンにより、デフォルトのpostgresqlのバージョンが異なります。
 
-ubuntu18または19を利用する場合は、下記箇所を修正してからansibleを実行してください。
+ubuntu16または19を利用する場合は、下記箇所を修正してからansibleを実行してください。
 
 roles/system/tasks/main.yml
 
 ```
-name='postgresql,postgresql-server-dev-9.5,python-psycopg2'
+name='postgresql,postgresql-server-dev-10,python-psycopg2'
 ```
 
 ```
-ubuntu16の場合 postgresql-server-dev-9.5  (初期値)
-ubuntu18の場合 postgresql-server-dev-10
+ubuntu16の場合 postgresql-server-dev-9.5
+ubuntu18の場合 postgresql-server-dev-10  (初期値)
 ubuntu19の場合 postgresql-server-dev-11
 ```
 
@@ -173,10 +173,9 @@ redmine_git_branch: 4.0-stable
 
 MIT License
 
-
 ## 作者
 
-y503unavailable （Redmine.Tokyoスタッフ）
+y503unavailable （Redmine.Tokyoスタッフ unofficial redmine cooking 担当）
 
 原作
 [ファーエンドテクノロジー株式会社](http://www.farend.co.jp/)
