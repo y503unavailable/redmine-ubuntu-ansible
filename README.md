@@ -63,6 +63,7 @@ admin初期パスワード  unofficial-cracking
 * Apache
 
 
+
 ## Redmineのインストール手順
 
 インストール直後の Ubuntu 18.04 にログインし以下の操作を行ってください。
