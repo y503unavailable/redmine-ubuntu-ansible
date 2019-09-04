@@ -110,7 +110,7 @@ cd redmine-ubuntu-ansible
 ansible-playbook -i hosts site.yml
 ```
 
-10〜20分ほどでインストールが完了します。
+20〜30分ほどでインストールが完了します。
 
 webブラウザで `http://サーバIPアドレス/redmine` にアクセスしてください。Redmineの画面が表示されるはずです。
 
