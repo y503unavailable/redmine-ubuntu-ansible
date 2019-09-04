@@ -14,6 +14,8 @@ Ansibleを使ってRedmineを自動インストールするためのプレイブ
 
 Redmine標準に対して、カテゴリのサブプロジェクト継承パッチの組み込み、プラグイン、テーマの追加、admin初期パスワードの変更などを行っています。
 
+---
+
 ## Redmine標準からの変更内容
 
 ### カテゴリのサブプロジェクト継承機能を追加しました。（標準のバージョンと同じ 2019/06/30） ###
@@ -62,7 +64,7 @@ admin初期パスワード  unofficial-cracking
 * PostgreSQL
 * Apache
 
-
+---
 
 ## Redmineのインストール手順
 
@@ -178,6 +180,7 @@ redmine_git_branch: 4.0-stable
 ### kodomo テーマで利用したい場合
 
 起動後、kodomoテーマを選択し、 message_customizeプラグインで用語を変更してください。
+
 https://github.com/akiko-pusu/redmine_theme_kodomo
 
 ## ライセンス
