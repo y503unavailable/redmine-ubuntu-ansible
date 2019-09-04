@@ -67,7 +67,7 @@ admin初期パスワード  unofficial-cracking
 
 インストール直後の Ubuntu 18.04 にログインし以下の操作を行ってください。
 
-（自動更新が完了するまで数分待ってから実行　unattendが完全に終わるまで待つこと）
+（自動更新(unattend)が完了するまで数分待ってから実行）
 
 ### Ansibleとgitとunzipのインストール
 
@@ -147,6 +147,11 @@ group_vars/redmine-servers
 ```
 redmine_default_theme: redmine_flat
 ```
+
+### kodomo テーマで利用したい場合
+
+起動後、kodomoテーマを選択し、 message_customizeプラグインで用語を変更してください。
+https://github.com/akiko-pusu/redmine_theme_kodomo
 
 ### Redmineオリジナルで利用したい場合
 
