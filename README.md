@@ -18,21 +18,13 @@ Redmine標準に対して、カテゴリのサブプロジェクト継承パッ�
 
 ## Redmine標準からの変更内容
 
-### カテゴリのサブプロジェクト継承機能を追加しました。（標準のバージョンと同じ 2019/06/30） ###
+### カテゴリのサブプロジェクト継承機能を追加（標準のバージョンと同様 2019/06/30） ###
 
 https://github.com/y503unavailable/redmine/issues/14
 
 http://www.redmine.org/issues/5358#note-108
 
-Redmine標準からの変更内容は下記参照ください。
-
-取り込んだ機能はRedmine.TokyoのUnofficialCookingで説明しています。
-
-https://github.com/y503unavailable/redmine/blob/3.4-unofficialcooking/README.rdoc     （未作成）
-
-https://redmine.tokyo/projects/unofficialcooking
-
-## 同時インストールするプラグイン
+### 同時インストールするプラグイン
 
 redmine_startpage, redmine_issue_templates, redmine_banner, redmine_view_customize, redmine_xlsx_format_issue_exporter, redmine_theme_changer, redmine_default_custom_query, redmine_message_customize
 
@@ -40,7 +32,7 @@ redmine_startpage, redmine_issue_templates, redmine_banner, redmine_view_customi
 
 https://github.com/y503unavailable/redmine-ubuntu-ansible/blob/master/roles/redmine-plugins/tasks/main.yml
 
-## 同時インストールするテーマ
+### 同時インストールするテーマ
 
 farend_basic,redmine_flat,gitmike,PurpleMine2,minimalflat2,flatly_light,kodomo,farend_bleuclair
 
@@ -48,7 +40,7 @@ farend_basic,redmine_flat,gitmike,PurpleMine2,minimalflat2,flatly_light,kodomo,f
 
 https://github.com/y503unavailable/redmine-ubuntu-ansible/blob/master/roles/redmine-themes/tasks/main.yml
 
-## admin初期パスワードの変更
+### admin初期パスワードの変更
 
 Redmineインストール直後のadmin初期パスワードは admin で固定されており、インストール直後に乗っ取られる可能性を否定できません。（特にインターネット上VPS等を利用する場合）
 
@@ -56,8 +48,7 @@ Redmineインストール直後のadmin初期パスワードは admin で固定�
 
 admin初期パスワード  unofficial-cracking
 
-
-## システム構成
+### システム構成
 
 * Redmine 4.0
 * Ubuntu Server 18.04 LTS
@@ -88,7 +79,7 @@ git clone https://github.com/y503unavailable/redmine-ubuntu-ansible.git
 
 ### PostgreSQLに設定するパスワードの変更 (推奨)
 
-ファイル `group_vars/redmine-servers` をエディタで開き、 `db_passwd_redmine` を適当な内容に変更してください。
+ファイル `group_vars/redmine-servers` をエディタで開き、 `db_passwd_redmine` を適切な内容に変更してください。
 
 これはPostgreSQLのRedmine用ユーザー redmine に設定されるパスワードです。
 
@@ -96,7 +87,7 @@ git clone https://github.com/y503unavailable/redmine-ubuntu-ansible.git
 
 ubuntuのバージョンにより、デフォルトのpostgresqlのバージョンが異なります。
 
-ubuntu16または19を利用する場合は、下記箇所を修正してからansibleを実行してください。
+ubuntu18以外（ubuntu16または19）上で利用する場合は、ansible実行前に下記箇所を修正してください。
 
 roles/system/tasks/main.yml
 
