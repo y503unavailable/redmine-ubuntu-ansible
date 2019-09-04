@@ -32,7 +32,7 @@ https://redmine.tokyo/projects/unofficialcooking
 
 ## 同時インストールするプラグイン
 
-~~full_text_search, view_customize, issue_templates, banner, wiki_lists, work_time,wiki_extensions, xlsx_format_issue_exporter, pivot_table, absolute_dates, startpage , theme_changer,mermaid_macro,redmine_tags,redmine_wysiwyg_editor (2018/9/1現在)~~
+redmine_startpage, redmine_issue_templates, redmine_banner, redmine_view_customize, redmine_xlsx_format_issue_exporter, redmine_theme_changer, redmine_default_custom_query, redmine_message_customize
 
 詳細は下記参照ください。
 
@@ -122,6 +122,8 @@ webブラウザで `http://サーバIPアドレス/redmine` にアクセスし�
 
 初期パスワードは admin/ unofficial-cracking です。（標準から変更）
 
+---
+
 ## 初期設定の変更
 
 初期設定を変更する場合は、ダウンロードしたプレイブック内の下記ファイル を、インストール前に変更してください。
@@ -148,10 +150,6 @@ group_vars/redmine-servers
 redmine_default_theme: redmine_flat
 ```
 
-### kodomo テーマで利用したい場合
-
-起動後、kodomoテーマを選択し、 message_customizeプラグインで用語を変更してください。
-https://github.com/akiko-pusu/redmine_theme_kodomo
 
 ### Redmineオリジナルで利用したい場合
 
@@ -173,6 +171,13 @@ redmine_git_branch: 4.0-stable
 これはPostgreSQLのRedmine用ユーザー redmine に設定されるパスワードです。
 
 ---
+
+## 起動後の設定変更
+
+### kodomo テーマで利用したい場合
+
+起動後、kodomoテーマを選択し、 message_customizeプラグインで用語を変更してください。
+https://github.com/akiko-pusu/redmine_theme_kodomo
 
 ## ライセンス
 
