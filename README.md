@@ -40,7 +40,7 @@ https://github.com/y503unavailable/redmine-ubuntu-ansible/blob/master/roles/redm
 
 ## 同時インストールするテーマ
 
-farend_basic,redmine_flat,gitmike,PurpleMine2,minimalflat2,flatly_light
+farend_basic,redmine_flat,gitmike,PurpleMine2,minimalflat2,flatly_light,kodomo,farend_bleuclair
 
 詳細は下記参照ください。
 
