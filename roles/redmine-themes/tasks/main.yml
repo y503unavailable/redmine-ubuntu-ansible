@@ -34,16 +34,28 @@
     repo=https://github.com/akiko-pusu/redmine_theme_kodomo.git
     dest={{ redmine_dir }}/public/themes/kodomo
 
+- name: theme_kodomo_midori
+  become: yes
+  git:
+    repo=https://github.com/akiko-pusu/redmine_theme_kodomo_midori.git
+    dest={{ redmine_dir }}/public/themes/redmine_theme_kodomo_midori
+
+- name: farend_bleuclair_check
+  stat:
+    path: "{{ redmine_dir }}/public/themes/bleuclair"
+  register: bleuclair_chk_file
+
 - name: farend_bleuclair
   become: yes
   git:
     repo=https://github.com/farend/redmine_theme_farend_bleuclair.git
     dest={{ redmine_dir }}/public/themes/bleuclair
+  when: bleuclair_chk_file.stat.exists == false
 
 - name: redmine_theme_minimalflat2_download
   become: yes
   get_url:
-    url: https://github.com/akabekobeko/redmine-theme-minimalflat2/releases/download/v1.5.0/minimalflat2-1.5.0.zip
+    url: https://github.com/akabekobeko/redmine-theme-minimalflat2/releases/download/v1.7.0/minimalflat2-1.7.0.zip
     dest: /tmp
 
 - name: redmine_theme_minimalflat2_dir
@@ -52,7 +64,7 @@
 
 - name: redmine_theme_minimalflat2_extract
   become: yes
-  unarchive: src=/tmp/minimalflat2-1.5.0.zip dest={{ redmine_dir }}/public/themes
+  unarchive: src=/tmp/minimalflat2-1.7.0.zip dest={{ redmine_dir }}/public/themes
 
 - name: default_theme
   become: yes
