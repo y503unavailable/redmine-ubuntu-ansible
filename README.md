@@ -48,16 +48,10 @@ Redmineインストール直後のadmin初期パスワードは admin で固定�
 
 admin初期パスワード  unofficial-cracking
 
-<<<<<<< HEAD
 ### システム構成
-
-* Redmine 4.0
-* Ubuntu Server 18.04 LTS
-=======
 * Ansible 2.8.5
 * Redmine 4.0
 * Ubuntu Server 18.04.3 LTS
->>>>>>> farend-master/master
 * PostgreSQL
 * Apache
 
@@ -73,19 +67,15 @@ admin初期パスワード  unofficial-cracking
 
 ```
 sudo apt-get update
-<<<<<<< HEAD
+
 sudo apt-get install -y python-pip libpython-dev git libssl-dev unzip
-sudo pip install ansible
-=======
+sudo pip install ansible\==2.8.5
 
 ========== Dockerの場合=========
 apt-get update
 apt-get install -y sudo iproute2
 ================================
 
-sudo apt-get install -y python-pip libpython-dev git libssl-dev
-sudo pip install ansible\==2.8.5
->>>>>>> farend-master/master
 ```
 
 ### playbookのダウンロード
@@ -124,12 +114,8 @@ ubuntu19の場合 postgresql-server-dev-11
 
 ```
 cd redmine-ubuntu-ansible
-<<<<<<< HEAD
-ansible-playbook -i hosts site.yml
-=======
 ansible-playbook -K -i hosts site.yml
 ==> "BECOME password"にsudoを実行するためのパスワードを入力してください。
->>>>>>> farend-master/master
 ```
 
 20〜30分ほどでインストールが完了します。
@@ -177,7 +163,7 @@ group_vars/redmine-servers
 
 ```
 redmine_git_url: https://github.com/redmine/redmine.git
-redmine_git_branch: 4.0-stable
+redmine_git_branch: 4.2-stable
 ```
 
 ### PostgreSQLに設定するパスワードの変更 (推奨)
