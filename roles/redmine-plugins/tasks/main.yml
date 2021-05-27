@@ -9,7 +9,7 @@
 - include: redmine_work_time.yml
 - include: redmine_xlsx_format_issue_exporter.yml
 - include: redmine_pivot_table.yml
-- include: redmine_full_text_search.yml
+# - include: redmine_full_text_search.yml
 - include: redmine_theme_changer.yml
 #- include: redmine_mermaid_macro.yml
 #- include: redmine_wysiwyg_editor.yml
@@ -23,7 +23,7 @@
 - include: redmine_issue_evm.yml
 - include: redmine_issues_panel.yml
 - include: redmine_ip_filter.yml
-- include: redmine_plantuml.yml
+# - include: redmine_plantuml.yml
 - include: redmine_issue_assign_notice.yml
 - include: redmine_edit_cf_at_issues_index.yml
 - include: redmine_numericfield_chart_macro.yml
